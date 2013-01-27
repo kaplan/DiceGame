@@ -1,0 +1,16 @@
+<form action="/dice/roll" method="get">
+
+  <input type="text" name="point" value="<%= @dice_roll %>">
+<!--  <input type="text" name="player" value="Dave"> -->
+
+  <input type="submit" value="Roll to start the game!">
+</form>
+
+
+<%= form_tag("/dice/roll", :method => "post") do %>
+  <%= submit_tag("Roll to start the game!") %>
+<% end %>
+
+  <%# token_tag nil %>
+
+<%# hidden_field_tag(:authenticity_token, form_authenticity_token) %>
